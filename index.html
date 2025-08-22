@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ankush Rai — Portfolio</title>
+  <meta name="description" content="Portfolio of Ankush Rai — Backend Software Engineer (Python/FastAPI), Distributed Systems, ML/AI." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <header class="site-header sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 overflow-hidden rounded-full ring-2 ring-slate-200">
+          <img src="assets/IMG_0197-EDIT.jpg" alt="Ankush Rai" class="h-full w-full object-cover object-top" loading="lazy" />
+        </div>
+        <div>
+          <p class="text-sm font-semibold">Ankush Rai</p>
+        </div>
+      </div>
+      <nav aria-label="Primary" class="hidden gap-6 md:flex">
+        <a href="#about" class="text-sm text-slate-600 hover:text-slate-900">About</a>
+        <a href="#experience" class="text-sm text-slate-600 hover:text-slate-900">Experience</a>
+        <a href="#education" class="text-sm text-slate-600 hover:text-slate-900">Education</a>
+        <a href="#projects" class="text-sm text-slate-600 hover:text-slate-900">Projects</a>
+        <a href="#skills" class="text-sm text-slate-600 hover:text-slate-900">Skills</a>
+        <a href="#publications" class="text-sm text-slate-600 hover:text-slate-900">Publications</a>
+        <a href="#awards" class="text-sm text-slate-600 hover:text-slate-900">Awards</a>
+        <a href="#contact" class="text-sm text-slate-600 hover:text-slate-900">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="focus-ring rounded-lg border border-slate-300 px-3 py-1.5 text-sm" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
+        <button id="menuBtn" class="ml-1 inline-flex items-center rounded-lg border border-slate-300 px-3 py-1.5 text-sm md:hidden" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">Menu</button>
+      </div>
+    </div>
+    <div id="mobileNav" hidden class="border-t border-slate-200 bg-white md:hidden">
+      <nav class="mx-auto grid max-w-6xl gap-1 px-4 py-2" aria-label="Mobile">
+        <a href="#about" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">About</a>
+        <a href="#experience" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Experience</a>
+        <a href="#education" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Education</a>
+        <a href="#projects" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Projects</a>
+        <a href="#skills" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Skills</a>
+        <a href="#publications" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Publications</a>
+        <a href="#awards" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Awards</a>
+        <a href="#contact" class="rounded px-2 py-2 text-slate-700 hover:bg-slate-50">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="mx-auto max-w-6xl px-4">
+    <section id="about" class="grid gap-10 py-14 md:grid-cols-[1.2fr,0.8fr] md:py-20">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight md:text-5xl">Senior Software Engineer
+          <span class="block text-xl font-medium text-slate-500 md:text-2xl mt-2">Scalable Backends · Distributed Systems · ML Integration · AWS</span>
+        </h1>
+        <p class="mt-5 max-w-2xl text-slate-600 md:text-lg">
+          Senior Software Engineer with 4+ years at ZS Associates and EY. Currently pursuing a Master’s in Computer Science at Santa Clara University, seeking Software/ML Engineering internships. Skilled in building scalable APIs, event-driven backends, and machine learning–driven systems.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#contact" class="focus-ring rounded-xl bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800">Contact</a>
+        </div>
+      </div>
+  <div class="ml-4 md:ml-12 lg:ml-16">
+        <div class="portrait-frame">
+          <img src="assets/IMG_0197-EDIT.jpg" alt="Portrait of Ankush Rai" class="portrait-img" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="scroll-mt-24 py-12">
+      <h2 class="text-2xl font-bold">Experience</h2>
+      <ol class="mt-6 space-y-6 border-l border-slate-200 pl-6">
+        <li>
+          <div class="-ml-[10px] flex items-start gap-4">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></div>
+            <div>
+              <h3 class="text-lg font-semibold">ZS — Senior Software Engineer</h3>
+              <p class="text-sm text-slate-500">Jul 2024 – Jan 2025 · Bengaluru, IN</p>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">
+                <li>Led migration from a legacy Tableau-based dashboard to a modern Web Application(React, FastAPI, Spring Boot) with Redis, driving 45% latency reduction and eliminating $100K/year in licensing costs.</li>
+                <li>Built ML microservice for anomaly detection in clinical system logs and operational metrics using isolation forests and time-series features, reducing triage time by 30%.</li>
+                <li>Developed a real-time notification system with WebSockets and AWS MSK, enabling sub-580ms delivery for alerts used by research and operations teams with 99.9% uptime.</li>
+                <li>Automated CI/CD pipelines with GitLab, Docker, and Pytest—cut deployment time by 35% and improved rollout stability.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="-ml-[10px] flex items-start gap-4">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></div>
+            <div>
+              <h3 class="text-lg font-semibold">ZS — Software Engineer</h3>
+              <p class="text-sm text-slate-500">Mar 2022 – Jun 2024 · Bengaluru, IN</p>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">
+                <li>Developed a GenAI-powered pipeline to extract KPIs from 10K+ unstructured healthcare reports using prompt chaining and preprocessing - automated 20+ analyst hours/week.</li>
+                <li>Optimised RESTful APIs to handle 3 times higher concurrent load by tuning DB connection pooling, adding Redis caching, and validating stability through JMeter load tests.</li>
+                <li>Integrated Prometheus and Grafana to monitor service health and improve incident response time.</li>
+                <li>Protected HIPAA-compliant pharmaceutical APIs by integrating Okta SSO with JWT tokens and rate-limiting, securing access to 500K+ patient records for research teams.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="-ml-[10px] flex items-start gap-4">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></div>
+            <div>
+              <h3 class="text-lg font-semibold">EY — Software Engineer I</h3>
+              <p class="text-sm text-slate-500">Oct 2020 – Feb 2022 · Bengaluru, IN</p>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">
+                <li>Improved backend response times by 35% across multiple services (Flask, Spring Boot) for a large automotive platform by implementing caching, pagination, and efficient payload handling.</li>
+                <li>Fixed race conditions in multithreaded Python services using locks and task queues—enhanced system stability and reduced transactional errors by 15%.</li>
+                <li>Tuned PostgreSQL performance using indexing and execution plan analysis, cutting query latency in key workflows.</li>
+                <li>Built robust unit and integration test suites with Pytest and Postman, increasing coverage and reducing production issues.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="-ml-[10px] flex items-start gap-4">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></div>
+            <div>
+              <h3 class="text-lg font-semibold">Pantech Solutions — Machine Learning Intern</h3>
+              <p class="text-sm text-slate-500">Aug 2018 – Nov 2018 · Chennai, IN</p>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">
+                <li>Developed data validation and preprocessing scripts for real-time stock data pipelines, improving training input quality.</li>
+                <li>Trained and validated ML models (Linear Regression, SVM) using scikit-learn to predict short-term stock trends, applying feature engineering for improved accuracy.</li>
+                <li>Documented edge cases and model drift patterns to improve debugging and retraining workflows.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="education" class="scroll-mt-24 py-12">
+      <h2 class="text-2xl font-bold">Education</h2>
+      <ol class="mt-6 space-y-6 border-l border-slate-200 pl-6">
+        <li>
+          <div class="-ml-[10px] flex items-start gap-4">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></div>
+            <div>
+              <h3 class="text-lg font-semibold">Santa Clara University</h3>
+              <p class="text-sm text-slate-500">Santa Clara, CA · Mar 2025 – Present</p>
+              <p class="mt-2 text-sm text-slate-700">Master of Science in Computer Science and Engineering</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="-ml-[10px] flex items-start gap-4">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400"></div>
+            <div>
+              <h3 class="text-lg font-semibold">SRM Institute of Science and Technology</h3>
+              <p class="text-sm text-slate-500">India · Aug 2016 – Jun 2020</p>
+              <p class="mt-2 text-sm text-slate-700">Bachelor of Technology in Computer Science and Engineering</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="scroll-mt-24 py-12">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl font-bold">Projects</h2>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
+          <header>
+            <h3 class="text-lg font-semibold">Digital Control Tower</h3>
+            <p class="mt-1 text-sm text-slate-500">Monitors API traffic to flag irregularities; reduced downtime incidents by ~15%.</p>
+          </header>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+            <li class="rounded bg-slate-100 px-2 py-1">Python</li>
+            <li class="rounded bg-slate-100 px-2 py-1">scikit‑learn</li>
+            <li class="rounded bg-slate-100 px-2 py-1">Pandas</li>
+          </ul>
+          <footer class="mt-4 flex items-center gap-3">
+            <a href="#" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">Case Study</a>
+          </footer>
+        </article>
+
+        <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
+          <header>
+            <h3 class="text-lg font-semibold">Quality Control Schedule Optimization</h3>
+            <p class="mt-1 text-sm text-slate-500">Live alerts over Kafka + WebSockets on AWS MSK; measured &lt;580 ms latency, 99.9% uptime.</p>
+          </header>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+            <li class="rounded bg-slate-100 px-2 py-1">FastAPI</li>
+            <li class="rounded bg-slate-100 px-2 py-1">Kafka (MSK)</li>
+            <li class="rounded bg-slate-100 px-2 py-1">AWS</li>
+          </ul>
+          <footer class="mt-4 flex items-center gap-3">
+            <a href="#" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">Case Study</a>
+          </footer>
+        </article>
+
+        <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
+          <header>
+            <h3 class="text-lg font-semibold">Adaptive Onboarding Experience Engine</h3>
+            <p class="mt-1 text-sm text-slate-500">Engineered a collaborative filtering model to personalize content on user onboarding dashboards, boosting feature adoption and user engagement.</p>
+          </header>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+            <li class="rounded bg-slate-100 px-2 py-1">Python</li>
+            <li class="rounded bg-slate-100 px-2 py-1">scikit‑learn</li>
+            <li class="rounded bg-slate-100 px-2 py-1">Pandas</li>
+          </ul>
+          <footer class="mt-4 flex items-center gap-3">
+            <a href="#" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">Case Study</a>
+          </footer>
+        </article>
+
+        <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
+          <header>
+            <h3 class="text-lg font-semibold">Automated Plant Growth Simulation</h3>
+            <p class="mt-1 text-sm text-slate-500">A Java-based system simulating plant growth with automated watering, temperature control, and pest management, featuring a real-time JavaFX UI.</p>
+          </header>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+            <li class="rounded bg-slate-100 px-2 py-1">Java</li>
+            <li class="rounded bg-slate-100 px-2 py-1">JavaFX</li>
+            <li class="rounded bg-slate-100 px-2 py-1">Maven</li>
+            <li class="rounded bg-slate-100 px-2 py-1">OOP</li>
+            <li class="rounded bg-slate-100 px-2 py-1">Design Patterns</li>
+          </ul>
+          <footer class="mt-4 flex items-center gap-3">
+            <a href="#" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">Case Study</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="scroll-mt-24 py-12">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50/50 p-6">
+        <div class="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <h3 class="text-lg font-semibold">Languages</h3>
+            <p class="mt-2 text-slate-600">Python, Java, TypeScript, JavaScript (Node.js)</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Frameworks</h3>
+            <p class="mt-2 text-slate-600">FastAPI, Spring Boot, Flask, Express.js</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Databases</h3>
+            <p class="mt-2 text-slate-600">PostgreSQL, MySQL, Redis</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Cloud & DevOps</h3>
+            <p class="mt-2 text-slate-600">AWS (EC2, S3, MSK), Docker, GitLab CI/CD, GitHub</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Testing</h3>
+            <p class="mt-2 text-slate-600">JUnit, Mockito, Jest, Postman, CI/CD Pipelines</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Tools</h3>
+            <p class="mt-2 text-slate-600">Kafka, JMeter, Prometheus, VisualVM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="scroll-mt-24 py-8">
+      <h2 class="text-2xl font-bold">Publications</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-sm text-slate-700">
+        <li><strong class="font-semibold text-slate-800">Image Compression with Neural Network using Autoencoder</strong> – Designed and implemented deep autoencoders for image compression, including a focused study on the MNIST dataset. Achieved significant reduction in storage requirements while maintaining reconstruction quality.</li>
+        <li><strong class="font-semibold text-slate-800">Weather Forecasting System using Machine Learning</strong> – Built ML-based models for short-term weather prediction using regression and time-series analysis, improving accuracy over baseline methods.</li>
+      </ul>
+    </section>
+
+    <section id="awards" class="scroll-mt-24 py-8">
+      <h2 class="text-2xl font-bold">Awards</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-sm text-slate-700">
+        <li><strong class="font-semibold text-slate-800">Spot Award (ZS Associates):</strong> Recognized for initiative and problem-solving in deploying a GenAI-based insight module for Pfizer’s Quality Control and Digital Optimization project.</li>
+        <li><strong class="font-semibold text-slate-800">Team Impact Award (ZS Associates):</strong> For contributing to high-impact deliverables in Amgen’s cross-functional setup.</li>
+        <li><strong class="font-semibold text-slate-800">Bravo (EY):</strong> Acknowledged for demonstrating consistent high-quality work for GM product modernization.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="scroll-mt-24 py-8">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <a href="mailto:ankushrai37@gmail.com" class="focus-ring rounded-xl bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800">Email Me</a>
+        <a href="https://www.linkedin.com/in/ankush-rai-599064140/" target="_blank" rel="noreferrer" class="focus-ring rounded-xl border border-slate-300 px-5 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+    © <span id="year"></span> Ankush Rai. Built with HTML + Tailwind.
+  </footer>
+
+  <button id="backToTop" class="fixed bottom-6 right-6 hidden rounded-full border border-slate-300 bg-white px-4 py-2 text-sm shadow" aria-label="Back to top">↑ Top</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
