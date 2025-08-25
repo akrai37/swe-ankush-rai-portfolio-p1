@@ -9,6 +9,85 @@ body.dark .site-header nav a { color: #e5e7eb; }
 body.dark .site-header nav a:hover,
 body.dark .site-header nav a.active { color: #93c5fd; }
 
+/* Dark mode readability adjustments */
+/* The Tailwind utility classes like text-slate-600/700 become too low-contrast on the near-black background. */
+body.dark .text-slate-700,
+body.dark .text-slate-600,
+body.dark .text-slate-500 { color: #cbd5e1; }
+/* Slightly dimmer variant for subtle metadata (dates, small captions) originally using text-slate-500 */
+body.dark p.text-sm.text-slate-500,
+body.dark .text-sm.text-slate-500 { color: #94a3b8; }
+/* Ensure list item text (experience bullets etc.) is readable */
+body.dark li.text-slate-700,
+body.dark li.text-slate-600,
+body.dark li { color: #dbe2e9; }
+/* Improve link contrast inside paragraphs if they inherit slate classes later */
+body.dark a { color: #93c5fd; }
+body.dark a:hover { color: #bfdbfe; }
+
+/* Dark mode – Back to top button contrast */
+body.dark #backToTop { 
+	background:#1e293b; /* slate-800-ish */
+	color:#f1f5f9; 
+	border-color:#334155; 
+	box-shadow:0 4px 14px -4px rgba(0,0,0,0.55);
+	transition:background .25s, box-shadow .25s, transform .25s; 
+}
+body.dark #backToTop:hover { 
+	background:#0f172a; 
+	box-shadow:0 6px 18px -6px rgba(0,0,0,0.65); 
+	transform:translateY(-2px);
+}
+body.dark #backToTop:active { transform:translateY(0); }
+
+/* Dark mode only – enhance contact button */
+body.dark .contact-btn { position:relative; background:#1e293b; color:#f1f5f9; border:1px solid transparent; box-shadow:0 4px 12px -4px rgba(0,0,0,0.55); transition:background .25s, box-shadow .25s, transform .25s; }
+body.dark .contact-btn:before { content:""; position:absolute; inset:0; padding:1px; border-radius:0.75rem; background:linear-gradient(120deg,#3b82f6,#6366f1,#0ea5e9); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; }
+body.dark .contact-btn:hover { background:#0f172a; box-shadow:0 6px 16px -6px rgba(0,0,0,0.65); transform:translateY(-2px); }
+body.dark .contact-btn:active { background:#1e293b; transform:translateY(0); }
+
+/* Dark mode – project technology badges (reduce whiteness) */
+body.dark #projects .bg-slate-100 { 
+	background:rgba(51,65,85,0.55); /* translucent deep slate */
+	color:#e2e8f0; 
+	border:1px solid #334155; 
+	box-shadow:0 1px 2px rgba(0,0,0,0.4) inset, 0 0 0 1px rgba(51,65,85,0.6);
+	backdrop-filter: blur(2px) saturate(1.1);
+	transition:background .25s, color .25s, border-color .25s; 
+}
+body.dark #projects .bg-slate-100:hover { 
+	background:rgba(71,85,105,0.65); 
+	border-color:#3b4b5e; 
+}
+
+/* Dark mode – Skills section enhancements */
+body.dark #skills .rounded-xl { 
+	background: linear-gradient(160deg,#0f172a 0%,#1e293b 55%,#0f172a 100%);
+	border-color:#334155;
+	box-shadow: 0 4px 24px -6px rgba(0,0,0,0.55), 0 0 0 1px rgba(51,65,85,0.6) inset;
+}
+body.dark #skills h2 { color:#f1f5f9; }
+body.dark #skills h3 { color:#f1f5f9; font-weight:600; }
+body.dark #skills p { color:#cbd5e1; }
+/* Slight subtle accent underline for section heading */
+body.dark #skills h2 { position:relative; }
+body.dark #skills h2:after { content:""; position:absolute; left:0; bottom:-6px; width:72px; height:3px; border-radius:2px; background:linear-gradient(90deg,#3b82f6,#38bdf8); }
+
+/* Dark mode – Publications & Awards heading emphasis */
+body.dark #publications strong,
+body.dark #awards strong { color:#f8fafc; }
+body.dark #publications li,
+body.dark #awards li { color:#d1d9e2; }
+
+/* Dark mode – ensure readable text on intentionally light background badges/boxes */
+body.dark .bg-slate-50,
+body.dark .bg-slate-100 { color:#1e293b; }
+/* Provide stronger link contrast inside light badges */
+body.dark .bg-slate-50 a,
+body.dark .bg-slate-100 a { color:#1d4ed8; }
+body.dark .bg-slate-50 a:hover,
+body.dark .bg-slate-100 a:hover { color:#2563eb; }
+
 /* Portrait framing */
 .portrait-frame { width: 200px; aspect-ratio: 4/5; border-radius: 1.75rem; overflow: hidden; position: relative; box-shadow: 0 8px 24px -8px rgba(15,23,42,0.25); border:1px solid rgba(148,163,184,0.35); background: linear-gradient(145deg,#f8fafc,#eef2f7); }
 .portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(1.05) contrast(1.02); }
