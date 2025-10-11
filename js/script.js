@@ -39,20 +39,23 @@ themeToggle?.addEventListener('click', () => {
 });
 applyTheme();
 
-// Toggle project details for Read More functionality using event delegation
-document.addEventListener('click', function(e) {
-  if (e.target && e.target.classList.contains('read-more-btn')) {
-    const button = e.target;
-    const article = button.closest('article');
-    const details = article.querySelector('.project-details');
-    const isExpanded = details.style.display === 'block';
-    
-    if (isExpanded) {
-      details.style.display = 'none';
-      button.textContent = 'Read More';
-    } else {
-      details.style.display = 'block';
-      button.textContent = 'Read Less';
-    }
-  }
+// Read More functionality - wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all read more buttons
+  const readMoreButtons = document.querySelectorAll('.read-more-btn');
+  
+  readMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const article = this.closest('article');
+      const details = article.querySelector('.project-details');
+      
+      if (details.style.display === 'block') {
+        details.style.display = 'none';
+        this.textContent = 'Read More';
+      } else {
+        details.style.display = 'block';
+        this.textContent = 'Read Less';
+      }
+    });
+  });
 });
