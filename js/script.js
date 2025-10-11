@@ -39,37 +39,20 @@ themeToggle?.addEventListener('click', () => {
 });
 applyTheme();
 
-// Toggle project details for Read More functionality
-window.toggleDetails = function(button) {
-  const article = button.closest('article');
-  const details = article.querySelector('.project-details');
-  const isExpanded = details.style.display !== 'none';
-  
-  if (isExpanded) {
-    details.style.display = 'none';
-    button.textContent = 'Read More';
-  } else {
-    details.style.display = 'block';
-    button.textContent = 'Read Less';
-  }
-};
-
-// Alternative: Event delegation approach (backup method)
-document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('read-more-btn')) {
-      const button = e.target;
-      const article = button.closest('article');
-      const details = article.querySelector('.project-details');
-      const isExpanded = details.style.display !== 'none';
-      
-      if (isExpanded) {
-        details.style.display = 'none';
-        button.textContent = 'Read More';
-      } else {
-        details.style.display = 'block';
-        button.textContent = 'Read Less';
-      }
+// Toggle project details for Read More functionality using event delegation
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.classList.contains('read-more-btn')) {
+    const button = e.target;
+    const article = button.closest('article');
+    const details = article.querySelector('.project-details');
+    const isExpanded = details.style.display === 'block';
+    
+    if (isExpanded) {
+      details.style.display = 'none';
+      button.textContent = 'Read More';
+    } else {
+      details.style.display = 'block';
+      button.textContent = 'Read Less';
     }
-  });
+  }
 });
