@@ -38,3 +38,18 @@ themeToggle?.addEventListener('click', () => {
   applyTheme();
 });
 applyTheme();
+
+// Toggle project details for Read More functionality
+function toggleDetails(button) {
+  const article = button.closest('article');
+  const details = article.querySelector('.project-details');
+  const isExpanded = details.style.display !== 'none';
+  
+  if (isExpanded) {
+    details.style.display = 'none';
+    button.textContent = 'Read More';
+  } else {
+    details.style.display = 'block';
+    button.textContent = 'Read Less';
+  }
+}

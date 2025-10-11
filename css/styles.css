@@ -99,6 +99,39 @@ body.dark .bg-slate-100 a { color:#1d4ed8; }
 body.dark .bg-slate-50 a:hover,
 body.dark .bg-slate-100 a:hover { color:#2563eb; }
 
+/* Dark mode – Read More button styling */
+body.dark .read-more-btn {
+	background: transparent;
+	color: #60a5fa;
+	border-color: #334155;
+	transition: all 0.25s;
+}
+body.dark .read-more-btn:hover {
+	background: rgba(59,130,246,0.1);
+	border-color: #60a5fa;
+	color: #93c5fd;
+}
+
+/* Dark mode – Project details expanded content */
+body.dark .project-details {
+	color: #cbd5e1;
+}
+body.dark .project-details strong {
+	color: #f1f5f9;
+}
+
+/* Smooth transition for project details expansion */
+.project-details {
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+/* Company badge styling */
+body.dark article .text-slate-400 {
+	color: #94a3b8;
+	font-style: italic;
+}
+
 /* Portrait framing */
 .portrait-frame { width: 200px; aspect-ratio: 4/5; border-radius: 1.75rem; overflow: hidden; position: relative; box-shadow: 0 8px 24px -8px rgba(15,23,42,0.25); border:1px solid rgba(148,163,184,0.35); background: linear-gradient(145deg,#f8fafc,#eef2f7); }
 .portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(1.05) contrast(1.02); }

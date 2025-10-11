@@ -246,37 +246,73 @@
           <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
             <header>
               <h4 class="text-lg font-semibold">Digital Control Tower</h4>
-              <p class="mt-1 text-sm text-slate-500">Monitors API traffic to flag irregularities; reduced downtime incidents by ~15%.</p>
+              <p class="mt-1 text-xs text-slate-400 font-medium">Amgen · ZS Associates</p>
+              <p class="mt-2 text-sm text-slate-500">Led development of a centralized monitoring platform that tracks API performance and system health metrics in real-time; ML-driven anomaly detection reduces incident response time and prevents ~15% of potential downtime events.</p>
+              <div class="mt-3 text-sm text-slate-600 project-details" style="display:none;">
+                <p class="mb-2"><strong>Challenge:</strong> Amgen's distributed digital infrastructure lacked unified visibility, making it difficult to proactively identify service disruptions that could impact critical pharmaceutical operations and clinical workflows.</p>
+                <p class="mb-2"><strong>Solution:</strong> Architected and led development of a full-stack web application featuring interactive dashboards for real-time visualization of API traffic patterns, latency metrics, error rates, and system logs across multiple services. Implemented ML-powered anomaly detection using isolation forests and time-series analysis to automatically surface irregularities and trigger intelligent alerts before issues escalated into incidents.</p>
+                <p class="mb-2"><strong>Impact:</strong> Provided 24/7 operational visibility across Amgen's digital ecosystem, reduced mean time to detect anomalies by 30%, and enabled proactive incident prevention through predictive alerting.</p>
+                <p><strong>Technologies:</strong> Java, Spring Boot, Python, Flask, scikit-learn, Pandas, JavaScript, RESTful APIs, real-time dashboards, ML anomaly detection, time-series analysis.</p>
+              </div>
             </header>
             <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+              <li class="rounded bg-slate-100 px-2 py-1">Java</li>
+              <li class="rounded bg-slate-100 px-2 py-1">Spring Boot</li>
               <li class="rounded bg-slate-100 px-2 py-1">Python</li>
+              <li class="rounded bg-slate-100 px-2 py-1">Flask</li>
               <li class="rounded bg-slate-100 px-2 py-1">scikit‑learn</li>
-              <li class="rounded bg-slate-100 px-2 py-1">Pandas</li>
+              <li class="rounded bg-slate-100 px-2 py-1">JavaScript</li>
+              <li class="rounded bg-slate-100 px-2 py-1">ML</li>
             </ul>
+            <footer class="mt-4">
+              <button class="read-more-btn rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" onclick="toggleDetails(this)">Read More</button>
+            </footer>
           </article>
 
           <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
             <header>
               <h4 class="text-lg font-semibold">Quality Control Schedule Optimization</h4>
-              <p class="mt-1 text-sm text-slate-500">Live alerts over Kafka + WebSockets on AWS MSK; measured &lt;580 ms latency, 99.9% uptime.</p>
+              <p class="mt-1 text-xs text-slate-400 font-medium">Pfizer · ZS Associates</p>
+              <p class="mt-2 text-sm text-slate-500">Real-time notification system delivering live alerts via Kafka and WebSockets on AWS MSK; achieved sub-580ms latency with 99.9% uptime for critical quality control operations.</p>
+              <div class="mt-3 text-sm text-slate-600 project-details" style="display:none;">
+                <p class="mb-2"><strong>Challenge:</strong> Pfizer's Quality Control teams needed instant notifications for schedule changes and compliance alerts to maintain pharmaceutical manufacturing standards.</p>
+                <p class="mb-2"><strong>Solution:</strong> Designed and deployed a GenAI-powered pipeline to extract KPIs from 10K+ unstructured healthcare reports using prompt chaining. Built event-driven notification system with Kafka (AWS MSK) and WebSockets for real-time delivery to operations and research teams.</p>
+                <p class="mb-2"><strong>Impact:</strong> Automated 20+ analyst hours/week, achieved 99.9% uptime, and enabled sub-580ms alert delivery. Earned Spot Award for initiative and problem-solving in deploying the GenAI insight module.</p>
+                <p><strong>Technologies:</strong> FastAPI, Kafka (AWS MSK), WebSockets, GenAI, prompt chaining, event-driven architecture, RESTful APIs.</p>
+              </div>
             </header>
             <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
               <li class="rounded bg-slate-100 px-2 py-1">FastAPI</li>
               <li class="rounded bg-slate-100 px-2 py-1">Kafka (MSK)</li>
               <li class="rounded bg-slate-100 px-2 py-1">AWS</li>
+              <li class="rounded bg-slate-100 px-2 py-1">GenAI</li>
             </ul>
+            <footer class="mt-4">
+              <button class="read-more-btn rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" onclick="toggleDetails(this)">Read More</button>
+            </footer>
           </article>
 
           <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
             <header>
               <h4 class="text-lg font-semibold">Adaptive Onboarding Experience Engine</h4>
-              <p class="mt-1 text-sm text-slate-500">Engineered a collaborative filtering model to personalize content on user onboarding dashboards, boosting feature adoption and user engagement.</p>
+              <p class="mt-1 text-xs text-slate-400 font-medium">General Motors · EY</p>
+              <p class="mt-2 text-sm text-slate-500">Collaborative filtering recommendation system that personalizes content on user onboarding dashboards, significantly boosting feature adoption and user engagement across GM's digital platforms.</p>
+              <div class="mt-3 text-sm text-slate-600 project-details" style="display:none;">
+                <p class="mb-2"><strong>Challenge:</strong> GM's modernized digital platforms needed to improve user onboarding and feature adoption across diverse user groups in the automotive ecosystem.</p>
+                <p class="mb-2"><strong>Solution:</strong> Engineered a collaborative filtering model to analyze user behavior patterns and recommend personalized onboarding content. Improved backend response times by 35% through caching, pagination, and efficient payload handling (Flask, Spring Boot).</p>
+                <p class="mb-2"><strong>Impact:</strong> Increased feature adoption rates, reduced onboarding time, and improved system performance. Fixed race conditions in multithreaded services using locks and task queues, reducing transactional errors by 15%.</p>
+                <p><strong>Technologies:</strong> Python, scikit-learn, Pandas, Flask, Spring Boot, collaborative filtering, caching strategies, multithreading optimization.</p>
+              </div>
             </header>
             <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
               <li class="rounded bg-slate-100 px-2 py-1">Python</li>
               <li class="rounded bg-slate-100 px-2 py-1">scikit‑learn</li>
               <li class="rounded bg-slate-100 px-2 py-1">Pandas</li>
+              <li class="rounded bg-slate-100 px-2 py-1">Flask</li>
             </ul>
+            <footer class="mt-4">
+              <button class="read-more-btn rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" onclick="toggleDetails(this)">Read More</button>
+            </footer>
           </article>
         </div>
       </div>
@@ -285,38 +321,41 @@
     <section id="skills" class="scroll-mt-24 py-12">
       <h2 class="text-2xl font-bold">Skills</h2>
       <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50/50 p-6">
-        <div class="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
           <div>
-            <h3 class="text-lg font-semibold">Languages</h3>
-            <p class="mt-2 text-slate-600">Python, Java, TypeScript, JavaScript (Node.js)</p>
+            <h3 class="text-lg font-semibold mb-3">Languages & Frameworks</h3>
+            <div class="space-y-2">
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Languages:</span> Python, Java, JavaScript/TypeScript, C</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Backend:</span> FastAPI, Spring Boot, Flask, Express.js</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Frontend:</span> React, Streamlit</p>
+            </div>
           </div>
+
           <div>
-            <h3 class="text-lg font-semibold">AI & Machine Learning</h3>
-            <p class="mt-2 text-slate-600">RAG, LangChain, scikit-learn, TensorFlow, PyTorch, Hugging Face Transformers, OpenAI API, NVIDIA NIM</p>
+            <h3 class="text-lg font-semibold mb-3">AI & Machine Learning</h3>
+            <div class="space-y-2">
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Frameworks:</span> TensorFlow, PyTorch, scikit-learn</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">GenAI/LLM:</span> RAG, LangChain, Hugging Face, OpenAI API, NVIDIA NIM</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">NLP:</span> Transformers, Embeddings, TF-IDF, sentence-transformers</p>
+            </div>
           </div>
+
           <div>
-            <h3 class="text-lg font-semibold">Frameworks</h3>
-            <p class="mt-2 text-slate-600">FastAPI, Spring Boot, Flask, Express.js, Streamlit</p>
+            <h3 class="text-lg font-semibold mb-3">Data & Infrastructure</h3>
+            <div class="space-y-2">
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Databases:</span> PostgreSQL, MySQL, Redis, Vector DBs</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Streaming:</span> Kafka, AWS MSK, WebSockets</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Data Tools:</span> Pandas, NumPy, Matplotlib, Jupyter</p>
+            </div>
           </div>
+
           <div>
-            <h3 class="text-lg font-semibold">Databases</h3>
-            <p class="mt-2 text-slate-600">PostgreSQL, MySQL, Redis, Vector DBs</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">Cloud & DevOps</h3>
-            <p class="mt-2 text-slate-600">AWS (EC2, S3, MSK, Lambda), Docker, GitLab CI/CD, GitHub Actions</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">Data & Analytics</h3>
-            <p class="mt-2 text-slate-600">Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Data Pipelines</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">Testing & Monitoring</h3>
-            <p class="mt-2 text-slate-600">Pytest, JUnit, Mockito, Postman, Prometheus, Grafana</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold">Message Queues & Streaming</h3>
-            <p class="mt-2 text-slate-600">Kafka, AWS MSK, WebSockets, Event-Driven Architecture</p>
+            <h3 class="text-lg font-semibold mb-3">Cloud & DevOps</h3>
+            <div class="space-y-2">
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Cloud:</span> AWS (EC2, S3, MSK, Lambda), Azure</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">DevOps:</span> Docker, GitLab CI/CD, GitHub Actions</p>
+              <p class="text-sm text-slate-600"><span class="font-medium text-slate-700">Monitoring:</span> Prometheus, Grafana, CloudWatch</p>
+            </div>
           </div>
         </div>
       </div>
