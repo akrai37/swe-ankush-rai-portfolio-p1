@@ -126,6 +126,16 @@ body.dark .project-details strong {
 	overflow: hidden;
 }
 
+/* Prevent grid items from stretching when one expands */
+#projects .grid {
+	align-items: start;
+}
+
+#projects article.card {
+	height: auto;
+	align-self: start;
+}
+
 /* Company badge styling */
 body.dark article .text-slate-400 {
 	color: #94a3b8;
