@@ -142,6 +142,28 @@ body.dark article .text-slate-400 {
 	font-style: italic;
 }
 
+/* DevPost button styling - light brown/amber */
+.devpost-btn {
+	background: #fffbeb;
+	border-color: #fde68a;
+	color: #92400e;
+	transition: all 0.25s;
+}
+.devpost-btn:hover {
+	background: #fef3c7;
+}
+
+/* Dark mode – DevPost button */
+body.dark .devpost-btn {
+	background: rgba(217, 119, 6, 0.15);
+	border-color: rgba(245, 158, 11, 0.3);
+	color: #fbbf24;
+}
+body.dark .devpost-btn:hover {
+	background: rgba(217, 119, 6, 0.25);
+	border-color: rgba(245, 158, 11, 0.5);
+}
+
 /* Portrait framing */
 .portrait-frame { width: 200px; aspect-ratio: 4/5; border-radius: 1.75rem; overflow: hidden; position: relative; box-shadow: 0 8px 24px -8px rgba(15,23,42,0.25); border:1px solid rgba(148,163,184,0.35); background: linear-gradient(145deg,#f8fafc,#eef2f7); }
 .portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(1.05) contrast(1.02); }
