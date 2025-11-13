@@ -171,8 +171,23 @@
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
             <header>
-              <h4 class="text-lg font-semibold">CFO Copilot — Mini FP&A Agent</h4>
-              <p class="mt-1 text-sm text-slate-500">A lightweight FP&A assistant built with Streamlit that reads CSV fixtures and answers common FP&A questions with text summaries and charts. Features PDF export for board-pack snapshots.</p>
+              <h4 class="text-lg font-semibold">CFO Copilot: Mini FP&A Agent</h4>
+              <p class="mt-1 text-sm text-slate-500">Lightweight FP&A assistant built with Streamlit that reads CSV fixtures (actuals, budget, FX, cash) and answers common finance questions with text summaries and charts. Supports compact 2-page PDF export for board-pack snapshots.</p>
+              <div class="mt-3 text-sm text-slate-600 project-details" style="display:none;">
+                <p class="mb-2"><strong>Architecture:</strong> Rule-based intent classifier (deterministic, tested keyword heuristics) paired with retrieval-augmented fallback using TF-IDF and optional Hugging Face embeddings (sentence-transformers/all-MiniLM-L6-v2).</p>
+                <p class="mb-2"><strong>Core Components:</strong></p>
+                <ul class="list-disc pl-6 mb-2 space-y-1">
+                  <li><strong>app.py</strong> — Streamlit UI and application glue</li>
+                  <li><strong>agent/planner.py</strong> — Rule-based intent/parameter parsing and routing</li>
+                  <li><strong>agent/tools.py</strong> — Data-loading helpers, finance computations (Revenue vs Budget, Gross Margin %, Opex breakdown, Cash runway, EBITDA), PDF export</li>
+                  <li><strong>agent/rag.py</strong> — Minimal retrieval module for fallback intent mapping</li>
+                  <li><strong>fixtures/</strong> — Example CSV files (actuals.csv, budget.csv, fx.csv, cash.csv)</li>
+                </ul>
+                <p class="mb-2"><strong>Supported Metrics:</strong> Revenue vs Budget, Gross Margin %, Opex breakdown, EBITDA, Cash runway. Environment toggle for embedding model (RAG_EMBEDDING_MODEL).</p>
+                <p class="mb-2"><strong>Design Philosophy:</strong> Why not a large LLM? For small, structured CSV tables and standard finance reports, rule-based + local retrieval is cost-effective, low-latency, and keeps sensitive financial data off external APIs. Falls back to TF-IDF (no embeddings required) for portability.</p>
+                <p class="mb-2"><strong>Example Queries:</strong> "What was June 2025 revenue vs budget in USD?" | "Show Gross Margin % trend for the last 3 months." | "Break down Opex by category for June 2025." | "What is our cash runway right now?" | "What is EBITDA for June 2025?"</p>
+                <p><strong>Deployment:</strong> Streamlit Community Cloud. Local quickstart: clone repo, create venv, pip install -r requirements.txt, streamlit run app.py</p>
+              </div>
             </header>
             <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
               <li class="rounded bg-slate-100 px-2 py-1">Python</li>
@@ -185,10 +200,9 @@
             <footer class="mt-4 flex items-center gap-3">
               <a href="https://fpa-copilot.streamlit.app/" target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">Live Demo</a>
               <a href="https://github.com/akrai37/fpa-copilot" target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">GitHub</a>
+              <button class="read-more-btn rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">Read More</button>
             </footer>
-          </article>
-
-          <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
+          </article>          <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
             <header>
               <h4 class="text-lg font-semibold">cf_ai_chat_memory: Persistent AI Chat on Cloudflare</h4>
               <p class="mt-1 text-sm text-slate-500">A serverless AI chat assistant built entirely on Cloudflare that remembers conversations. Uses Llama 3.1 8B via Workers AI for intelligent responses, Cloudflare Workers for edge compute, and Cloudflare KV for persistent conversation memory with 24-hour sessions.</p>
@@ -223,23 +237,6 @@
             </ul>
             <footer class="mt-4 flex items-center gap-3">
               <a href="https://github.com/akrai37/Virtual_Memory_Management_Simulator" target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">GitHub</a>
-            </footer>
-          </article>
-
-          <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
-            <header>
-              <h4 class="text-lg font-semibold">GreenSense: Automated Plant Health Monitoring</h4>
-              <p class="mt-1 text-sm text-slate-500">A Java-based system simulating plant growth with automated watering, temperature control, and pest management, featuring a real-time JavaFX UI.</p>
-            </header>
-            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
-              <li class="rounded bg-slate-100 px-2 py-1">Java</li>
-              <li class="rounded bg-slate-100 px-2 py-1">JavaFX</li>
-              <li class="rounded bg-slate-100 px-2 py-1">Maven</li>
-              <li class="rounded bg-slate-100 px-2 py-1">OOP</li>
-              <li class="rounded bg-slate-100 px-2 py-1">Design Patterns</li>
-            </ul>
-            <footer class="mt-4 flex items-center gap-3">
-              <a href="https://github.com/akrai37/Smart_Garden_System-1" target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">GitHub</a>
             </footer>
           </article>
 
@@ -281,6 +278,23 @@
             <footer class="mt-4 flex items-center gap-3">
               <a href="https://devpost.com/software/acousticshield" target="_blank" rel="noreferrer" class="devpost-btn rounded border border-amber-200 bg-amber-50 px-3 py-1.5 text-sm hover:bg-amber-100">DevPost</a>
               <a href="https://github.com/akrai37/acousticshield-aws-backend" target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">GitHub</a>
+            </footer>
+          </article>
+
+          <article class="card group rounded-2xl border border-slate-200 p-4 shadow-sm transition hover:shadow-md">
+            <header>
+              <h4 class="text-lg font-semibold">GreenSense: Automated Plant Health Monitoring</h4>
+              <p class="mt-1 text-sm text-slate-500">A Java-based system simulating plant growth with automated watering, temperature control, and pest management, featuring a real-time JavaFX UI.</p>
+            </header>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+              <li class="rounded bg-slate-100 px-2 py-1">Java</li>
+              <li class="rounded bg-slate-100 px-2 py-1">JavaFX</li>
+              <li class="rounded bg-slate-100 px-2 py-1">Maven</li>
+              <li class="rounded bg-slate-100 px-2 py-1">OOP</li>
+              <li class="rounded bg-slate-100 px-2 py-1">Design Patterns</li>
+            </ul>
+            <footer class="mt-4 flex items-center gap-3">
+              <a href="https://github.com/akrai37/Smart_Garden_System-1" target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50">GitHub</a>
             </footer>
           </article>
         </div>
