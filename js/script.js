@@ -27,7 +27,8 @@ backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: '
 document.getElementById('year').textContent = new Date().getFullYear();
 const themeToggle = document.getElementById('themeToggle');
 function applyTheme() {
-  const dark = localStorage.getItem('theme') === 'dark';
+  const stored = localStorage.getItem('theme');
+  const dark = stored ? stored === 'dark' : true;
   document.body.classList.toggle('dark', dark);
   themeToggle?.setAttribute('aria-pressed', String(dark));
   themeToggle.textContent = dark ? '☀️' : '🌙';
@@ -58,4 +59,25 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  const copyBtn = document.getElementById('copyEmailBtn');
+  if (copyBtn) {
+    const label = document.getElementById('copyEmailLabel');
+    const original = label.textContent;
+    copyBtn.addEventListener('click', async function () {
+      const email = this.dataset.email;
+      try {
+        await navigator.clipboard.writeText(email);
+      } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.value = email;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      label.textContent = 'Copied!';
+      setTimeout(() => { label.textContent = original; }, 1500);
+    });
+  }
 });
